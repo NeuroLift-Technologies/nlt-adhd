@@ -128,12 +128,11 @@ nlt-adhd/
 ├── docs/
 │   └── whitepaper-v1.0-NeuroLift-ADHD.md  # Canonical whitepaper (§1-23)
 ├── app/ | src/             # To be scaffolded — 1 orchestrator + 20 advocates (Developer = #20) + surfaces
-│   ├── orchestrator/       # Classifies "I'm stuck" → advocate
+│   ├── orchestrator/       # Classifies "I'm stuck" → advocate (machine format, not natural language)
 │   ├── advocates/          # 19 trait specialists + Developer builder (small coder, proposes diffs, requires [Approve])
-│   ├── governance/         # ASFDK boundary — capability ≠ authority
+│   ├── governance/         # ASFDK boundary — capability ≠ authority (installed in every AI)
 │   └── surfaces/           # Talk/Plan/Focus/Start/Recover/Reflect/Continue
-├── .nltotoi/               # Governance validation (when added)
-└── archive/                # Reversible history
+└── .nltotoi/               # Governance validation (when added)
 ```
 
 Upstream code lives elsewhere and is **referenced, not vendored**:
