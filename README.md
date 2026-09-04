@@ -217,6 +217,14 @@ Upstream code lives elsewhere and is **referenced, not vendored**:
                  REAL-WORLD ASSISTANCE
 ```
 
+
+
+## Enabler Protocol — Longitudinal Agency Detection
+
+> **Product Spec:** `NLT-PROD-EP-001 v2.0` — canonical spec lives in [`enabler-protocol/README.md`](enabler-protocol/README.md) (this repo, product layer).
+
+The Enabler Protocol governs whether the user's agency is being preserved or quietly replaced over time — the longitudinal third shape alongside RRTA (crisis) and Sleepwalker (continuity). It asks: **"Is this user's agency eroding across sessions?"** — never from a single turn (R18), currently `risk="none"` (R17) in `nlt-sdl`. See [`enabler-protocol/`](enabler-protocol/) for the full three-state model (`Active → Prompted → Gated → Unlocked`), feature classification, tiered response, and open items.
+
 ## What This Repo Is Not
 
 Not a replacement for human judgment, not a diagnostic tool, not a clinician, not a generic productivity chatbot, not an autonomous agent without governance, not a claim to have solved AI governance generally (§20).
