@@ -140,6 +140,45 @@ Upstream code lives elsewhere and is **referenced, not vendored**:
 * **AI-Fusion:** https://github.com/NeuroLift-Technologies/neurolift-ai-fusion
 * **Governance canonical:** https://github.com/NeuroLift-Technologies/.github-private
 
+## Required Governance Files (per ORG-DEV-OTOI-1.0.3 — to be added)
+
+> Canonical governance scaffold per `ORG-DEV-OTOI-1.0.3`. `docs/whitepaper-v1.0-NeuroLift-ADHD.md` is present; all other entries below are pending scaffold.
+
+**Core** — pending scaffold
+* `NLT-DEV-OTOI.md` — pending scaffold
+* `AGENTS.md` — pending scaffold
+* `REVIEW.md` — pending scaffold
+* `nltotoi.json` — pending scaffold
+
+**`.nltotoi/`** — pending scaffold
+* `.nltotoi/README.md` — pending scaffold
+* `.nltotoi/index/governance-files.md` — pending scaffold
+* `.nltotoi/contracts/README.md` — pending scaffold
+* `.nltotoi/scripts/validate-governance.sh` — pending scaffold
+
+**`templates/`** — pending scaffold
+* `templates/agent-registration.json` — pending scaffold
+* `templates/handoff-record.json` — pending scaffold
+* `templates/escalation.md` — pending scaffold
+* `templates/intent-log.md` — pending scaffold
+* `templates/review-record.md` — pending scaffold
+
+**`.github/`**
+* `.github/ISSUE_TEMPLATE/` — pending scaffold
+* `.github/PULL_REQUEST_TEMPLATE/` — pending scaffold
+* `.github/workflows/validate-governance.yml` — pending scaffold
+
+**`SOPs/`**
+* `SOPs/` — pending scaffold
+
+**`.claude/`**
+* `.claude/` — pending scaffold
+
+**`docs/`**
+* `docs/whitepaper-v1.0-NeuroLift-ADHD.md` — present (canonical, §1-23)
+
+**Governance in Every AI** — Every AI in this repo (orchestrator + 20 advocates; orchestrator↔advocates is JSON, orchestrator↔user is natural language) will have Harness + MCP + ASFDK middleware per `asfdk-dev` guide (`CRISIS_ONLY` → `DEVELOPMENT` → `UNIFIED`). Governance is a runtime property: capability ≠ authority; `user_input` vs `tool_result` vs `model_output` vs `system` vs `unknown` — information is not authority.
+
 ## Pipeline — World >> Fusion >> App
 
 ```text
