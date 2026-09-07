@@ -52,7 +52,7 @@ ADHD is not one condition but interacting cognitive challenges. The architecture
 
 The user never picks the Advocate. **The orchestrator determines which capability is relevant.**
 
-At runtime this repo runs **1 orchestrator : 20 advocates** (19 trait specialists + RSD Shield = 20; Developer lives inside the orchestrator module). Upstream, each Advocate is the fused result of **Avatar (lives the struggle) >> Aide (PhD + lived-expert coaching) >> Advocate** trained in the embodied simulation.
+At runtime this repo runs **1 orchestrator : 20 advocates** (19 trait specialists + RSD Shield = 20; Developer lives inside the orchestrator module). The scaffold contains all 20 advocate dirs — **MVP wires 6** (01 StayAlert, 04 Timely, 05 MemoryMate, 07 TaskKickstart, 09 PlannerPro, 20 RSD Shield); the remaining 14 are stubs (see `src/index.ts`). Upstream, each Advocate is the fused result of **Avatar (lives the struggle) >> Aide (PhD + lived-expert coaching) >> Advocate** trained in the embodied simulation.
 
 Original persona catalog: `neurolift-ai-fusion` (canonical 20: StayAlert → RSD Shield).
 
@@ -132,7 +132,7 @@ nlt-adhd/
 │   │   └── developer/      # Developer builder (small coder, proposes diffs, requires [Approve])
 │   ├── advocates/          # 20 dirs, 01-stayAlert … 20-rsdShield
 │   ├── governance/         # ASFDK boundary — capability ≠ authority (installed in every AI)
-│   └── surfaces/           # Talk/Plan/Focus/Start/Recover/Reflect/Continue
+│   └── surfaces/           # MVP surfaces: StartView, TimeBar, Top3View, DumpBar (Talk/Plan/Focus/Recover/Reflect/Continue = planned UX)
 ├── app/                    # Next.js entry (layout.tsx, page.tsx)
 ├── .nltotoi/               # Governance validation
 └── NLT-DEV-OTOI.md         # Org-level coding agent contract (root)
