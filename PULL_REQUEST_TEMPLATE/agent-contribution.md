@@ -17,7 +17,6 @@
 - [ ] No architecture decisions made without Joshua's approval
 - [ ] No production credentials or secrets committed
 - [ ] No external service integrations added without Joshua's approval
-- [ ] Reviews follow the canonical format in `REVIEW.md` (see `templates/review-record.md`)
 
 ---
 
