@@ -44,15 +44,15 @@ The Advocate is the user-facing intelligence that combines (§3):
 
 It is a **cognitive-support system, not a clinician**, whose purpose is to reduce friction between what the user intends to do and their ability to act on that intention.
 
-## 19 Advocates, One Orchestrator
+## 20 Advocates, One Orchestrator
 
-ADHD is not one condition but interacting cognitive challenges. The architecture therefore fields **19 Advocates representing 16 ADHD traits** (§4) — plus the orchestrator and the small **Developer builder** (#20) that remakes the app per user:
+ADHD is not one condition but interacting cognitive challenges. The architecture therefore fields **20 Advocates representing the canonical persona catalog (StayAlert → RSD Shield, §4)** — plus the orchestrator, which contains the small **Developer builder** that remakes the app per user:
 
-*Task initiation, sustained attention, distraction, prioritization, working memory, time awareness, task switching, planning, execution, procrastination, decision paralysis, emotional regulation, hyperfocus, overwhelm, etc.*
+*Task initiation, sustained attention, distraction, prioritization, working memory, time awareness, task switching, planning, execution, procrastination, decision paralysis, emotional regulation, hyperfocus, overwhelm, rejection sensitivity, etc.*
 
 The user never picks the Advocate. **The orchestrator determines which capability is relevant.**
 
-At runtime this repo runs **1 orchestrator : 20 advocates** (19 traits + Developer). Upstream, each Advocate is the fused result of **Avatar (lives the struggle) >> Aide (PhD + lived-expert coaching) >> Advocate** trained in the embodied simulation.
+At runtime this repo runs **1 orchestrator : 20 advocates** (19 trait specialists + RSD Shield = 20; Developer lives inside the orchestrator module). The scaffold contains all 20 advocate dirs — **MVP wires 6** (01 StayAlert, 04 Timely, 05 MemoryMate, 07 TaskKickstart, 09 PlannerPro, 20 RSD Shield); the remaining 14 are stubs (see `src/index.ts`). Upstream, each Advocate is the fused result of **Avatar (lives the struggle) >> Aide (PhD + lived-expert coaching) >> Advocate** trained in the embodied simulation.
 
 Original persona catalog: `neurolift-ai-fusion` (canonical 20: StayAlert → RSD Shield).
 
@@ -127,12 +127,15 @@ nlt-adhd/
 ├── README.md               # This file — product charter summary
 ├── docs/
 │   └── whitepaper-v1.0-NeuroLift-ADHD.md  # Canonical whitepaper (§1-23)
-├── app/ | src/             # To be scaffolded — 1 orchestrator + 20 advocates (Developer = #20) + surfaces
+├── src/                    # Scaffolded — 1 orchestrator + 20 advocates + surfaces
 │   ├── orchestrator/       # Classifies "I'm stuck" → advocate (machine format, not natural language)
-│   ├── advocates/          # 19 trait specialists + Developer builder (small coder, proposes diffs, requires [Approve])
+│   │   └── developer/      # Developer builder (small coder, proposes diffs, requires [Approve])
+│   ├── advocates/          # 20 dirs, 01-stayAlert … 20-rsdShield
 │   ├── governance/         # ASFDK boundary — capability ≠ authority (installed in every AI)
-│   └── surfaces/           # Talk/Plan/Focus/Start/Recover/Reflect/Continue
-└── .nltotoi/               # Governance validation (when added)
+│   └── surfaces/           # MVP surfaces: StartView, TimeBar, Top3View, DumpBar (Talk/Plan/Focus/Recover/Reflect/Continue = planned UX)
+├── app/                    # Next.js entry (layout.tsx, page.tsx)
+├── .nltotoi/               # Governance validation
+└── NLT-DEV-OTOI.md         # Org-level coding agent contract (root)
 ```
 
 Upstream code lives elsewhere and is **referenced, not vendored**:
@@ -140,39 +143,39 @@ Upstream code lives elsewhere and is **referenced, not vendored**:
 * **AI-Fusion:** https://github.com/NeuroLift-Technologies/neurolift-ai-fusion
 * **Governance canonical:** https://github.com/NeuroLift-Technologies/.github-private
 
-## Required Governance Files (per ORG-DEV-OTOI-1.0.3 — to be added)
+## Required Governance Files (per ORG-DEV-OTOI-1.0.3)
 
-> Canonical governance scaffold per `ORG-DEV-OTOI-1.0.3`. `docs/whitepaper-v1.0-NeuroLift-ADHD.md` is present; all other entries below are pending scaffold.
+> Canonical governance scaffold per `ORG-DEV-OTOI-1.0.3`. `docs/whitepaper-v1.0-NeuroLift-ADHD.md` is present; all files below are scaffolded and tracked.
 
-**Core** — pending scaffold
-* `NLT-DEV-OTOI.md` — pending scaffold
-* `AGENTS.md` — pending scaffold
-* `REVIEW.md` — pending scaffold
-* `nltotoi.json` — pending scaffold
+**Core**
+* `NLT-DEV-OTOI.md` — present
+* `AGENTS.md` — present
+* `REVIEW.md` — present
+* `nltotoi.json` — present
 
-**`.nltotoi/`** — pending scaffold
-* `.nltotoi/README.md` — pending scaffold
-* `.nltotoi/index/governance-files.md` — pending scaffold
-* `.nltotoi/contracts/README.md` — pending scaffold
-* `.nltotoi/scripts/validate-governance.sh` — pending scaffold
+**`.nltotoi/`**
+* `.nltotoi/README.md` — present
+* `.nltotoi/index/governance-files.md` — present
+* `.nltotoi/contracts/README.md` — present
+* `.nltotoi/scripts/validate-governance.sh` — present
 
-**`templates/`** — pending scaffold
-* `templates/agent-registration.json` — pending scaffold
-* `templates/handoff-record.json` — pending scaffold
-* `templates/escalation.md` — pending scaffold
-* `templates/intent-log.md` — pending scaffold
-* `templates/review-record.md` — pending scaffold
+**`templates/`**
+* `templates/agent-registration.json` — present
+* `templates/handoff-record.json` — present
+* `templates/escalation.md` — present
+* `templates/intent-log.md` — present
+* `templates/review-record.md` — present
 
 **`.github/`**
-* `.github/ISSUE_TEMPLATE/` — pending scaffold
-* `.github/PULL_REQUEST_TEMPLATE/` — pending scaffold
-* `.github/workflows/validate-governance.yml` — pending scaffold
+* `.github/ISSUE_TEMPLATE/` — present
+* `.github/PULL_REQUEST_TEMPLATE/` — present
+* `.github/workflows/validate-governance.yml` — present
 
 **`SOPs/`**
-* `SOPs/` — pending scaffold
+* `SOPs/` — present
 
 **`.claude/`**
-* `.claude/` — pending scaffold
+* `.claude/` — present
 
 **`docs/`**
 * `docs/whitepaper-v1.0-NeuroLift-ADHD.md` — present (canonical, §1-23)
@@ -239,10 +242,10 @@ For ADHD: convert intention into action. For architecture: separate intelligence
 
 ---
 
-## Quick Start (next)
+## Quick Start
 
 ```bash
-# web — Next.js (to be scaffolded here, you own mobile via Android Studio)
+# web — Next.js app/ (scaffolded; mobile via Android Studio)
 pnpm install
 pnpm dev      # → http://localhost:3000  (Talk / Start / Top3 / DumpBar)
 ```
